@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftSwap | Post Shift</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-slate-50" data-page="post-shift" data-requires-auth="true">
+  <div id="demo-mode-banner" class="hidden" role="status" aria-live="polite"></div>
+  <header id="global-header"></header>
+
+  <main class="mx-auto max-w-3xl px-4 py-6 md:px-6">
+    <section class="card-panel">
+      <h1 class="mb-1 text-2xl font-bold text-slate-900">Post a New Shift</h1>
+      <p class="mb-6 text-sm text-slate-600">Create an open-shift request for qualified teammates.</p>
+      <form id="post-shift-form" class="grid gap-4 sm:grid-cols-2" aria-label="Post shift form">
+        <div>
+          <label for="shiftDate" class="form-label">Date</label>
+          <input id="shiftDate" name="shiftDate" type="date" class="input-field" required>
+        </div>
+        <div>
+          <label for="roleName" class="form-label">Role</label>
+          <input id="roleName" name="roleName" type="text" class="input-field" placeholder="RN, cashier, etc." required>
+        </div>
+        <div>
+          <label for="startTime" class="form-label">Start time</label>
+          <input id="startTime" name="startTime" type="time" class="input-field" required>
+        </div>
+        <div>
+          <label for="endTime" class="form-label">End time</label>
+          <input id="endTime" name="endTime" type="time" class="input-field" required>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="location" class="form-label">Location</label>
+          <input id="location" name="location" type="text" class="input-field" placeholder="Unit A / Downtown Clinic" required>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="notes" class="form-label">Notes</label>
+          <textarea id="notes" name="notes" rows="4" class="input-field" placeholder="Optional context for teammates"></textarea>
+        </div>
+        <div class="sm:col-span-2 flex flex-wrap gap-3">
+          <button type="submit" class="btn-primary">Submit Shift Request</button>
+          <a href="./employee-dashboard.html" class="btn-secondary">Back to Dashboard</a>
+        </div>
+      </form>
+      <p id="post-shift-message" class="mt-4 text-sm" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+  <script src="../js/utils.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/shifts.js"></script>
+  <script src="../js/claims.js"></script>
+  <script src="../js/approvals.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftSwap | Manager Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-slate-50" data-page="manager-dashboard" data-requires-auth="true" data-required-role="manager">
+  <div id="demo-mode-banner" class="hidden" role="status" aria-live="polite"></div>
+  <header id="global-header"></header>
+
+  <main class="mx-auto max-w-7xl px-4 py-6 md:px-6">
+    <section class="mb-6">
+      <h1 class="text-2xl font-bold text-slate-900">Manager Dashboard</h1>
+      <p class="text-sm text-slate-600">Approve pending claims, monitor escalations, and track overtime risk.</p>
+    </section>
+
+    <section aria-labelledby="pending-queue-heading" class="mb-6">
+      <h2 id="pending-queue-heading" class="section-title">Pending approval queue</h2>
+      <div id="pending-approvals-list" class="grid gap-4"></div>
+    </section>
+
+    <section aria-labelledby="escalations-heading" class="mb-6">
+      <h2 id="escalations-heading" class="section-title">Escalation alerts (unclaimed shifts &lt; 4 hours)</h2>
+      <div id="escalation-alerts" class="grid gap-3"></div>
+    </section>
+
+    <section aria-labelledby="overtime-heading" class="mb-6">
+      <h2 id="overtime-heading" class="section-title">Team overtime risk indicators</h2>
+      <div id="overtime-indicators" class="grid gap-3 md:grid-cols-2"></div>
+    </section>
+
+    <section aria-labelledby="all-shifts-heading">
+      <div class="mb-3 flex flex-wrap items-end gap-3">
+        <div class="grow">
+          <h2 id="all-shifts-heading" class="section-title mb-1">All shifts overview</h2>
+          <p class="text-sm text-slate-600">Filter shifts by status and role/location search.</p>
+        </div>
+        <div>
+          <label for="manager-status-filter" class="mb-1 block text-xs font-medium text-slate-600">Status</label>
+          <select id="manager-status-filter" class="input-field min-w-[150px]">
+            <option value="all">All</option>
+            <option value="open">Open</option>
+            <option value="claimed">Claimed</option>
+            <option value="approved">Approved</option>
+            <option value="rejected">Rejected</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div>
+          <label for="manager-search-filter" class="mb-1 block text-xs font-medium text-slate-600">Search</label>
+          <input id="manager-search-filter" type="text" class="input-field min-w-[220px]" placeholder="Role or location">
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table-base">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Role</th>
+              <th>Location</th>
+              <th>Posted By</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="all-shifts-table"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+  <script src="../js/utils.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/shifts.js"></script>
+  <script src="../js/claims.js"></script>
+  <script src="../js/approvals.js"></script>
+</body>
+</html>

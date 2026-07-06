@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftSwap | Shift Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-slate-50" data-page="shift-details" data-requires-auth="true">
+  <div id="demo-mode-banner" class="hidden" role="status" aria-live="polite"></div>
+  <header id="global-header"></header>
+
+  <main class="mx-auto max-w-5xl px-4 py-6 md:px-6">
+    <section class="mb-5 flex items-center justify-between gap-3">
+      <div>
+        <h1 class="text-2xl font-bold text-slate-900">Shift Details</h1>
+        <p class="text-sm text-slate-600">Review assignment history and take action.</p>
+      </div>
+      <a href="./employee-dashboard.html" class="btn-secondary">Back</a>
+    </section>
+
+    <section id="shift-details-card" class="card-panel mb-6"></section>
+    <section id="shift-action-controls" class="card-panel mb-6"></section>
+
+    <section class="card-panel">
+      <h2 class="section-title">Audit history</h2>
+      <div class="table-wrapper">
+        <table class="table-base">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Actor</th>
+              <th>Action</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="shift-audit-table"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+  <script src="../js/utils.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/shifts.js"></script>
+  <script src="../js/claims.js"></script>
+  <script src="../js/approvals.js"></script>
+</body>
+</html>
