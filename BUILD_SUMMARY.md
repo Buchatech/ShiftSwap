@@ -359,9 +359,9 @@ shiftswap/
 ## 📞 Support & Documentation
 
 - **Architecture**: See `architecture.md` for technical details
-- **Requirements**: See `requirements.md` for feature specifications
-- **Scope**: See `scope.md` for MVP boundaries
-- **Charter**: See `project-charter.md` for project overview
+- **Requirements**: See `Project matter/requirements.md` for feature specifications
+- **Scope**: See `Project matter/scope.md` for MVP boundaries
+- **Charter**: See `Project matter/project-charter.md` for project overview
 
 ---
 

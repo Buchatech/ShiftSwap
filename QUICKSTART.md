@@ -222,7 +222,7 @@ shiftswap/
 ## 📚 Documentation
 
 - **Architecture**: See `architecture.md` for technical details
-- **Requirements**: See `requirements.md` for feature specifications
+- **Requirements**: See `Project matter/requirements.md` for feature specifications
 - **Build Summary**: See `BUILD_SUMMARY.md` for build details
 
 ## 🚀 Next Steps
