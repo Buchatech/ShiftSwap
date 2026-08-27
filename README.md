@@ -1,6 +1,6 @@
 # ShiftSwap
 
-A web application that helps hourly employees request shift coverage and pick up available shifts, with manager approval workflows
+A web application that helps hourly employees request shift coverage and pick up available shifts, with manager approval workflows.
 
 ## Features
 
